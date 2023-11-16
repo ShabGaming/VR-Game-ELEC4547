@@ -18,9 +18,8 @@ public class ReadUSB : MonoBehaviour
     // Change this to be compatible with your computer.
     // The easiest way to check the port anme is to check it on Arduino IDE.
     // For example, "COM4" on Windows and "/dev/tty.usbmodem2815011" on Mac.
-    const string portName = "COM8";
+    const string portName = "COM10";
 
-    public bool EnableRotation = false;
     SerialPort serialPort = new SerialPort(portName, baudrate);
 
     void Start()
@@ -48,6 +47,7 @@ public class ReadUSB : MonoBehaviour
         // Convert list of bytes to string
         string text = System.Text.Encoding.UTF8.GetString(buffer.ToArray());
 
+
         // Split string into lines
         string[] lines = text.Split('\n');
         string[] line = lines[0].Split(' ');
@@ -59,25 +59,16 @@ public class ReadUSB : MonoBehaviour
             float quat_z = HexToFloat(line[3]);
             float quat_w = HexToFloat(line[4]);
 
-            Quaternion q = new Quaternion(quat_y, -quat_z, -quat_x, quat_w);
+            Quaternion q = new Quaternion(-quat_y, -quat_z, -quat_x, -quat_w);
 
             q.Normalize();
 
-            // Check if EnableRotation is true
-            if (EnableRotation)
-            {
-                // Convert the quaternion to Euler angles and add 180 to the z component
-                Vector3 euler = q.eulerAngles;
-                euler.z += 180;
+            // Convert the quaternion to Euler angles and add 180 to the z component
+            Vector3 euler = q.eulerAngles;
+            euler.z += 180;
 
-                // Convert the Euler angles back to a quaternion and assign it to the transform
-                transform.rotation = Quaternion.Euler(euler);
-            }
-            else
-            {
-                // If EnableRotation is false, assign the quaternion directly to the transform
-                transform.rotation = Quaternion.Inverse(q);
-            }
+            // Convert the Euler angles back to a quaternion and assign it to the transform
+            transform.rotation = Quaternion.Euler(euler);
         }
     }
 
