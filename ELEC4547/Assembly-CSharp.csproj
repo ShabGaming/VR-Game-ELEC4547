@@ -80,11 +80,14 @@
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardAndroidDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardiOSDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\UnityEditorDevice.cs" />
+     <Compile Include="Assets\Scripts\HandTracking.cs" />
+     <Compile Include="Assets\Scripts\Lines.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MoveObstacle.cs" />
      <Compile Include="Assets\Scripts\NegPoint.cs" />
      <Compile Include="Assets\Scripts\ReadUSB.cs" />
      <Compile Include="Assets\Scripts\ScoreUpdate.cs" />
+     <Compile Include="Assets\Scripts\UDPReceive.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserWindow.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />
@@ -160,19 +163,19 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -375,20 +378,20 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.20f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
  <Reference Include="GLTFSerialization">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
  </Reference>
  <Reference Include="Ionic.Zip.Unity">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="SketchfabPlugin">
- <HintPath>E:/Unity Projects/VR-Game-ELEC4547/ELEC4547/Assets/Sketchfab For Unity/Dependencies/Libraries/SketchfabPlugin.dll</HintPath>
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Assets/Sketchfab For Unity/Dependencies/Libraries/SketchfabPlugin.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>C:/Users/User/UnityProjects/VR-Game-ELEC4547/ELEC4547/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.20f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
