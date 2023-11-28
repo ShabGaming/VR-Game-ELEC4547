@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
 
     // Reference to the game object that is the player
     public GameObject player;
-    public static float rotationoffset = 0;
-    public static bool offset_enabled = false;
 
     // Use WASD to move the player
     void Update()
@@ -51,24 +49,20 @@ public class PlayerController : MonoBehaviour
             player.transform.Translate(Vector3.down * Time.deltaTime * 5);
         }
 
-        // Use the 'insert' key to enable or disable the offset
-        if (Input.GetKeyDown(KeyCode.Insert))
+        // Use the 'R' key to enable or disable the offset
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            offset_enabled = !offset_enabled;
+            Debug.Log("Offset enabled: " + ReadUSB.offset_enabled);
+            ReadUSB.offset_enabled = !ReadUSB.offset_enabled;
         }
 
         // We are using a VR for orientation, so we can can not just rotate the camera but rather we have to continously offset rotation
         if (Input.GetKey(KeyCode.Q))
         {
-            rotationoffset += 1;
+            ReadUSB.rotationoffset += 1;
         } else if (Input.GetKey(KeyCode.E))
         {
-            rotationoffset -= 1;
-        }
-
-        // continuously rotate the camera by the offset in the y axis
-        if (offset_enabled) {
-            player.transform.Rotate(0, rotationoffset, 0);
+            ReadUSB.rotationoffset -= 1;
         }
     }
 }

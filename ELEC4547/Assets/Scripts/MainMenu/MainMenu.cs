@@ -136,7 +136,7 @@ public class MainMenu : MonoBehaviour
             {
                 ArenaInitialize.songSelected = songIndex + 1;
                 ArenaInitialize.delay_initial = delay;
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
         }
     }
@@ -245,7 +245,7 @@ public class MainMenu : MonoBehaviour
             {
                 ArenaInitialize.songSelected = songIndex + 1;
                 ArenaInitialize.delay_initial = delay;
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
         }
     }

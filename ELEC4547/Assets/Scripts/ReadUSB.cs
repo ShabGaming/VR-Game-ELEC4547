@@ -15,6 +15,9 @@ public class ReadUSB : MonoBehaviour
     const int baudrate = 115200;
     const string portName = "COM10";
 
+    public static float rotationoffset = 0;
+    public static bool offset_enabled = true;
+
     SerialPort serialPort = new SerialPort(portName, baudrate);
 
     void Start()
@@ -86,6 +89,11 @@ public class ReadUSB : MonoBehaviour
                     // Convert the quaternion to Euler angles and add 180 to the z component
                     Vector3 euler = q.eulerAngles;
                     euler.z += 180;
+
+                    if (offset_enabled)
+                    {
+                        euler.y += rotationoffset;
+                    }
 
                     // Convert the Euler angles back to a quaternion and assign it to the transform
                     transform.rotation = Quaternion.Euler(euler);
