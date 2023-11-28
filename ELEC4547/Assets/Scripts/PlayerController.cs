@@ -71,7 +71,4 @@ public class PlayerController : MonoBehaviour
             player.transform.Rotate(0, rotationoffset, 0);
         }
     }
-
-
-
 }

@@ -661,7 +661,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131988830}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 3cea225be2fdfc2428ebdec4cca66ab8, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 1852395b7832aa949a3e514c836a3fd4, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -9126,7 +9126,7 @@ MonoBehaviour:
     type: 3}
   redMaterial: {fileID: 2100000, guid: 18cfd6eb6ae1f354ab7ab8cb11999fad, type: 2}
   blueMaterial: {fileID: 2100000, guid: a2bbc622e400d7f48ba2f0b35fe635f5, type: 2}
-  beatLevelTextFile: {fileID: 4900000, guid: f89beae8cfadc5a4eae5b220a2d75f2c, type: 3}
+  beatLevelTextFile: {fileID: 4900000, guid: dc3155284b73a604e90526e0dc893c3a, type: 3}
   currentBeatLevelIndex: 0
   lower_bound: 0.4
   upper_bound: 0.85
