@@ -1,1 +1,5 @@
 *.mp4
+
+/ELEC4547/[Bb]uild/
+/ELEC4547/[Bb]uilds/
+/[Rr]ecordings/
