@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 29633
+  controlID: 121
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 498}
   m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-  controlID: 29634
+  controlID: 57
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,10 +162,10 @@ MonoBehaviour:
     y: 0
     width: 1365
     height: 501
-  m_MinSize: {x: 402, y: 224}
-  m_MaxSize: {x: 8002, y: 4024}
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 29635
+  controlID: 135
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 1055
     height: 501
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 274}
   m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 29674
+  controlID: 58
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -434,9 +434,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -42.62647, y: -31.516136, z: 50.86815}
+    m_Target: {x: -19.11247, y: -13.30507, z: 62.109833}
     speed: 2
-    m_Value: {x: -42.62647, y: -31.516136, z: 50.86815}
+    m_Value: {x: -19.11247, y: -13.30507, z: 62.109833}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -464,9 +464,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.22141789, y: 0.33278367, z: -0.08069747, w: -0.9130811}
+    m_Target: {x: -0.13405353, y: 0.14365134, z: -0.019642906, w: -0.9803102}
     speed: 2
-    m_Value: {x: -0.22141789, y: 0.33278367, z: -0.08069747, w: -0.9130811}
+    m_Value: {x: -0.13405353, y: 0.14365134, z: -0.019642906, w: -0.9803102}
   m_Size:
     m_Target: 79.68162
     speed: 2
@@ -513,7 +513,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1c5efeff225efeff445efeff4a5efeff765efeffa05ffeffc65ffeffc85ffeff6260feff1862feff6c80feffcab3feffd4c2feff74f4feff7ef4feff82f4feff86f4feff8cf4feff38f8feff4cf8feff50f8feff54f8feff5af8feff5213ffff1647ffff4c47ffff7247ffffa047ffffb253ffffce53ffffd053ffffdac0ffff8ec7ffffa6d4ffff24ebffffdcfaffff2afbffffdefbffff7834000082340000923400008c4e0000f85e0000b05f0000c65f0000e85f000050600000606000007a600000ea6d0000ac6e0000be6e0000fe6e00005c6f000042700000fe4d0200c24e0200024f0200064f02002c4f0200584f0200e84f0200400b0300181c03007e850300f88503009c860300b0860300c6860300e4860300e6860300e88603007a870300
+      m_ExpandedIDs: 6eedfffff8edffff26fbffffdefbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -575,20 +575,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 88
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: 88
   m_LastProjectPath: E:\Unity Projects\VR-Game-ELEC4547\ELEC4547
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: b80a0000
-    m_LastClickedID: 2744
-    m_ExpandedIDs: 00000000b80a0000980e0000c40e00009010000092100000941000001e1100007e110000a21100003c12000004a2020010a20200cea2020000ca9a3b
+    scrollPos: {x: 0, y: 159}
+    m_SelectedIDs: 74120000
+    m_LastClickedID: 4724
+    m_ExpandedIDs: 00000000be0a00009e0e0000ac0e0000da0e000008100000b4100000b6100000b81000004811000084110000b2110000d81100007412000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -616,7 +616,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b80a0000980e0000c40e00009010000092100000941000001e1100007e110000a21100003c12000004a2020010a20200cea2020000ca9a3b
+    m_ExpandedIDs: 00000000be0a00009e0e0000ac0e0000da0e000008100000b4100000b6100000b81000004811000084110000b2110000d811000074120000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
