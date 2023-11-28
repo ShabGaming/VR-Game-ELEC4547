@@ -5,6 +5,20 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - LeftHand
+  - RightHand
+  - Song1
+  - Song2
+  - Song3
+  - Song4
+  - Arena3
+  - Arena4
+  - Start
+  - ObstacleJabB
+  - ObstacleJabR
+  - ObstacleB
+  - ObstacleR
+  - DontHit
   layers:
   - Default
   - TransparentFX

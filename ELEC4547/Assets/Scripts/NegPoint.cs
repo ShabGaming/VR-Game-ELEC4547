@@ -8,7 +8,10 @@ public class NegPoint : MonoBehaviour
     public ScoreUpdate scoreUpdate;
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("ObstacleB") ||
+            collision.gameObject.CompareTag("ObstacleR") ||
+            collision.gameObject.CompareTag("ObstacleJabR") ||
+            collision.gameObject.CompareTag("ObstacleJabB"))
         {
             Debug.Log("Hit obstacle");
             Destroy(collision.gameObject);

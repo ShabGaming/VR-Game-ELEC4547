@@ -11,10 +11,7 @@ public class HandTracking : MonoBehaviour
     public UDPReceive udpReceive;
     public GameObject[] LeftHandPoints;
     public GameObject[] RightHandPoints;
-    void Start()
-    {
 
-    }
 
     // Update is called once per frame
     void Update()

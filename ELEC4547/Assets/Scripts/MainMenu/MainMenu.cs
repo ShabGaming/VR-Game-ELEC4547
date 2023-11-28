@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Runtime.InteropServices;
 using System.Security.Policy;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -37,7 +40,7 @@ public class MainMenu : MonoBehaviour
     public Material[] arenaSelectedMaterials;
     
     // Function to change the material of the song and arena objects to their alternate selection materials.
-    void ChangeSongMaterial(int songSelected, int ArenaSelected)
+    public void ChangeSongMaterial(int songSelected, int ArenaSelected)
     {
         switch (songSelected)
         {
@@ -84,6 +87,172 @@ public class MainMenu : MonoBehaviour
         ChangeSongMaterial(DefaultSongSelected, DefaultArenaSelected);
     }
 
-    // Create a function to check if the controller is colliding with the song or arena objects. If yes, update the index of the song or arena and also update the material of the song and arena objects.
-    
+    // This script will be attatched to each of the hand objects.
+
+    // Check for collision between the hand objects and the song and arena objects.
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Collision detected");
+        if (other.gameObject.CompareTag("Song1"))
+        {
+            ChangeSongMaterial(1, arenaIndex + 2);
+            songIndex = 0;
+        }
+        else if (other.gameObject.CompareTag("Song2"))
+        {
+            ChangeSongMaterial(2, arenaIndex + 2);
+            songIndex = 1;
+        }
+        else if (other.gameObject.CompareTag("Song3"))
+        {
+            ChangeSongMaterial(3, arenaIndex + 2);
+            songIndex = 2;
+        }
+        else if (other.gameObject.CompareTag("Song4"))
+        {
+            ChangeSongMaterial(4, arenaIndex + 2);
+            songIndex = 3;
+        }
+        else if (other.gameObject.CompareTag("Arena3"))
+        {
+            ChangeSongMaterial(songIndex + 1, 3);
+            arenaIndex = 3;
+        }
+        else if (other.gameObject.CompareTag("Arena4"))
+        {
+            ChangeSongMaterial(songIndex + 1, 4);
+            arenaIndex = 4;
+        }
+        else if (other.gameObject.CompareTag("Start"))
+        {
+            Debug.Log("Start");
+            if (arenaIndex == 0)
+            {
+                ArenaInitialize.songSelected = songIndex + 1;
+                ArenaInitialize.delay_initial = delay;
+                SceneManager.LoadScene(1);
+            }
+            else if (arenaIndex == 1)
+            {
+                ArenaInitialize.songSelected = songIndex + 1;
+                ArenaInitialize.delay_initial = delay;
+                SceneManager.LoadScene(2);
+            }
+        }
+    }
+
+    int delay = 1;
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("Delay 1");
+            UpdateDelayText(1);
+            delay = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Debug.Log("Delay 2");
+            UpdateDelayText(2);
+            delay = 2;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Debug.Log("Delay 3");
+            UpdateDelayText(3);
+            delay = 3;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Debug.Log("Delay 4");
+            UpdateDelayText(4);
+            delay = 4;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            Debug.Log("Delay 5");
+            UpdateDelayText(5);
+            delay = 5;
+        }
+
+        // Incase the user wants to use the keyboard to select the song and arena. We will use the square left and right brackets to circle through the song and arena options. Left bracked for arena, right bracket for song.
+        // If the left bracket key is pressed
+        if (Input.GetKeyDown(KeyCode.LeftBracket))
+        {
+            // If the arena index is 0
+            if (arenaIndex == 0)
+            {
+                // Change the arena index to 1
+                arenaIndex = 1;
+                // Change the material of the arena objects to their alternate selection materials
+                ChangeSongMaterial(songIndex + 1, arenaIndex + 3);
+            }
+            // If the arena index is 1
+            else if (arenaIndex == 1)
+            {
+                // Change the arena index to 0
+                arenaIndex = 0;
+                // Change the material of the arena objects to their alternate selection materials
+                ChangeSongMaterial(songIndex + 1, arenaIndex + 3);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.RightBracket))
+        {
+            // If the song index is 0
+            if (songIndex == 0)
+            {
+                // Change the song index to 1
+                songIndex = 1;
+                // Change the material of the song objects to their alternate selection materials
+                ChangeSongMaterial(songIndex + 1, arenaIndex + 2);
+            }
+            // If the song index is 1
+            else if (songIndex == 1)
+            {
+                // Change the song index to 2
+                songIndex = 2;
+                // Change the material of the song objects to their alternate selection materials
+                ChangeSongMaterial(songIndex + 1, arenaIndex + 2);
+            }
+            // If the song index is 2
+            else if (songIndex == 2)
+            {
+                // Change the song index to 3
+                songIndex = 3;
+                // Change the material of the song objects to their alternate selection materials
+                ChangeSongMaterial(songIndex + 1, arenaIndex + 2);
+            }
+            // If the song index is 3
+            else if (songIndex == 3)
+            {
+                // Change the song index to 0
+                songIndex = 0;
+                // Change the material of the song objects to their alternate selection materials
+                ChangeSongMaterial(songIndex + 1, arenaIndex + 2);
+            }
+        }
+        // Escape key to start the game
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Start");
+            if (arenaIndex == 0)
+            {
+                ArenaInitialize.songSelected = songIndex + 1;
+                ArenaInitialize.delay_initial = delay;
+                SceneManager.LoadScene(1);
+            }
+            else if (arenaIndex == 1)
+            {
+                ArenaInitialize.songSelected = songIndex + 1;
+                ArenaInitialize.delay_initial = delay;
+                SceneManager.LoadScene(2);
+            }
+        }
+    }
+
+    public TMPro.TextMeshProUGUI DelayText;
+    void UpdateDelayText(int delayTextInt)
+    {
+        DelayText.text = "Difficulty:" + delayTextInt + "\n------------\n1 is Highest";
+    }
 }

@@ -34,4 +34,11 @@ public class ScoreUpdate : MonoBehaviour
         // Update the score text
         scoreText.text = "Score:" + currentScore;
     }
+
+    public int GetScore()
+    {
+        // Get the current score
+        int currentScore = int.Parse(scoreText.text.Substring(6));
+        return currentScore;
+    }
 }
