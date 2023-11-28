@@ -375,6 +375,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66592651}
   m_CullTransparentMesh: 0
+--- !u!1 &89825762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 89825764}
+  - component: {fileID: 89825763}
+  m_Layer: 0
+  m_Name: MainMenuController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &89825763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89825762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d342b46536ca7184a9a75b77833ec58f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  songOptions:
+  - 1
+  - 2
+  - 3
+  - 4
+  songIndex: 0
+  arenaOptions:
+  - 3
+  - 4
+  arenaIndex: 0
+  DefaultSongSelected: 1
+  DefaultArenaSelected: 3
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
+  song1: {fileID: 62199167}
+  song2: {fileID: 261597825}
+  song3: {fileID: 524856969}
+  song4: {fileID: 1431825958}
+  arena3: {fileID: 1032602277}
+  arena4: {fileID: 1305725093}
+  songMaterials:
+  - {fileID: 2100000, guid: 588f6abd4497f4c4da10cf08d4ae5823, type: 2}
+  - {fileID: 2100000, guid: 842f4f0f91abfa94eac8a680543d28d7, type: 2}
+  - {fileID: 2100000, guid: 5baf8959a35721445b27999f10931cfc, type: 2}
+  - {fileID: 2100000, guid: b8cffae86edc7e348af718d6a175213b, type: 2}
+  arenaMaterials:
+  - {fileID: 2100000, guid: 146f5f1b6bc9bdb41b501efffbd7386a, type: 2}
+  - {fileID: 2100000, guid: 3a79c196eca8e2b4d884568317d6c001, type: 2}
+  songSelectedMaterials:
+  - {fileID: 2100000, guid: a8d73a7213a48974ca0163c781362d1c, type: 2}
+  - {fileID: 2100000, guid: a1be3f350be0f2f42a367f93ae3710e6, type: 2}
+  - {fileID: 2100000, guid: f8c7c5e2db452c84dbd354046801a2ed, type: 2}
+  - {fileID: 2100000, guid: edcfbfdbb0294f04b81a3e7b82db35b8, type: 2}
+  arenaSelectedMaterials:
+  - {fileID: 2100000, guid: 6b10177bea8a1e94ca9b903d0e048ae0, type: 2}
+  - {fileID: 2100000, guid: df79fe2132a8e4249ac6ee4870e7a044, type: 2}
+  DelayText: {fileID: 0}
+--- !u!4 &89825764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89825762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -26.743584, y: -39.29062, z: 123.72623}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
